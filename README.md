@@ -17,6 +17,12 @@ Platforms shut down, accounts get suspended, and links rot. **Sovereign Archive 
 
 ## Quick Start
 
+### Run Instantly Without Cloning
+
+```bash
+curl -sL https://raw.githubusercontent.com/habilozdemir/sovereign-archive-kit/main/archive_kit.py -o archive_kit.py && python3 archive_kit.py --help
+```
+
 ```bash
 # 1. Convert a Medium export (.zip) into a clean, SHA-256 sealed archive
 python3 archive_kit.py medium ~/Downloads/medium-export.zip -o ./medium-archive

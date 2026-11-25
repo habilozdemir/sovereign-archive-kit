@@ -6,6 +6,12 @@
 
 ## Hızlı Kullanım
 
+### Klonlamadan Tek Satırda Çalıştır
+
+```bash
+curl -sL https://raw.githubusercontent.com/habilozdemir/sovereign-archive-kit/main/archive_kit.py -o archive_kit.py && python3 archive_kit.py --help
+```
+
 ```bash
 # 1. Medium yedek paketini (.zip) temiz ve SHA-256 mühürlü arşive dönüştür (taslakları otomatik ayıklar)
 python3 archive_kit.py medium ~/Downloads/medium-export.zip -o ./medium-archive
