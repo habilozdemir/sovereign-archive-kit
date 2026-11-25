@@ -1,0 +1,28 @@
+name: CI Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-cli:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify Repository Integrity
+        run: python3 archive_kit.py verify .
+      - name: Run End-to-End Smoke Tests
+        run: |
+          mkdir -p /tmp/sample_docs
+          echo "# Test Essay" > /tmp/sample_docs/essay.md
+          python3 archive_kit.py seal /tmp/sample_docs
+          python3 archive_kit.py verify /tmp/sample_docs

@@ -1,5 +1,7 @@
 # Sovereign Archive Kit
 
+[![CI Verification](https://github.com/habilozdemir/sovereign-archive-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/habilozdemir/sovereign-archive-kit/actions/workflows/ci.yml)
+
 **Zero-dependency CLI toolkit and 4-layer preservation protocol to turn Medium, Mastodon, Nostr, and personal essay collections into cryptographically verifiable, permanent digital archives.**
 
 > **[Türkçe Kullanım Kılavuzu (README.tr.md)](README.tr.md)**
